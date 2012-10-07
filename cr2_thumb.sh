@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Simple script to extract jpg thumbnails from Canon's CR2 files
 # Author: <carnophage at dobramama dot pl>
 
