@@ -10,4 +10,4 @@ or break something.
 License:
 --------
 
-See the [LICENSE](LICENSE.rst) file for license rights and limitations (MIT).
+See the `LICENSE LICENSE.rst`_ file for license rights and limitations (MIT).
