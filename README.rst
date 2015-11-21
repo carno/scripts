@@ -13,7 +13,7 @@ License:
 Unless specified otherwise, following license applies to all the scripts in 
 this repository.
 
-Copyright (C) 2012 <carnophage at dobramama dot pl>
+Copyright (C) 2015 <carnophage at dobramama dot pl>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
