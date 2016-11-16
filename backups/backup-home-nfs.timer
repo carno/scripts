@@ -2,8 +2,8 @@
 Description=Run backup hourly
 
 [Timer]
-OnCalendar=hourly
-AccuracySec=15m
+OnBootSec=30min
+OnUnitActiveSec=1h
 Persistent=true
 
 [Install]
