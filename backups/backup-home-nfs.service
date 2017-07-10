@@ -2,5 +2,5 @@
 Description=Backup /home to local nfs
 
 [Service]
-Type=simple
+Type=oneshot
 ExecStart=/root/scripts/backup-home-nfs.sh
