@@ -30,6 +30,10 @@ _checkmount() {
 
 _finish() {
     # clean up
+    # do not umount while borg is running
+    while pgrep borg &>/dev/null; do
+        sleep 3
+    done
     if _checkmount; then
         echo ">> Unmouting ${NFSMOUNT}"
         umount -v -l "${NFSMOUNT}"
