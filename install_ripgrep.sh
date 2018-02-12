@@ -22,6 +22,6 @@ tar -xzf ./*.tar.gz
 # copy binary
 install -v ripgrep*/rg /usr/local/bin/
 # copy man
-install -v ripgrep*/rg.1 /usr/local/share/man/man1/
+install -v ripgrep*/doc/rg.1 /usr/local/share/man/man1/
 # copy completion
-install -v ripgrep*/complete/rg.bash-completion /etc/bash_completion.d/
+install -v ripgrep*/complete/rg.bash /etc/bash_completion.d/
