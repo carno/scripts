@@ -22,7 +22,7 @@ done
 cd -
 
 echo "Extracting archives…"
-unzip -u -d "${HOME}/.fonts" "${_TMP}/*.zip"
+unzip -o -u "${_TMP}/*.zip" -d "${HOME}/.fonts"
 
 # update font cache
 fc-cache -f -v
