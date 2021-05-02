@@ -13,13 +13,10 @@ function _cleanup() {
 
 trap _cleanup EXIT
 
-
-cd "${_TMP}"
 for prefix in "${_FILES[@]}"; do
     echo "Downloading ${prefix}${_VERSION}.zip…"
-    curl -sSLO --fail "https://github.com/be5invis/Iosevka/releases/download/v${_VERSION}/${prefix}${_VERSION}.zip"
+    curl -sSLO --fail --output-dir "${_TMP}" "https://github.com/be5invis/Iosevka/releases/download/v${_VERSION}/${prefix}${_VERSION}.zip"
 done
-cd -
 
 echo "Extracting archives…"
 unzip -o -u "${_TMP}/*.zip" -d "${HOME}/.fonts"
