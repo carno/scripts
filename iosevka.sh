@@ -3,7 +3,7 @@
 set -euo pipefail
 
 declare -r _VERSION="${1:?Missing Iosevka version}"
-declare -a _FILES=("ttc-iosevka-" "ttf-iosevka-" "ttf-iosevka-term-")
+declare -a _FILES=("super-ttc-iosevka-")
 _TMP=$(mktemp -d)
 declare -r _TMP
 
@@ -17,6 +17,9 @@ for prefix in "${_FILES[@]}"; do
     echo "Downloading ${prefix}${_VERSION}.zip…"
     curl -sSLO --fail --output-dir "${_TMP}" "https://github.com/be5invis/Iosevka/releases/download/v${_VERSION}/${prefix}${_VERSION}.zip"
 done
+
+echo "Removing old fonts…"
+rm -rf ${HOME}/.fonts/[iI]osevka*
 
 echo "Extracting archives…"
 unzip -o -u "${_TMP}/*.zip" -d "${HOME}/.fonts"
