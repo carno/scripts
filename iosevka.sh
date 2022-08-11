@@ -19,7 +19,7 @@ for prefix in "${_FILES[@]}"; do
 done
 
 echo "Extracting archives…"
-unzip -o -u "${_TMP}/*.zip" "iosevka-term-medium*.ttf" -d "${_TMP}/in"
+unzip -o -u "${_TMP}/*.zip" "iosevka-term-medium*.ttf" iosevka-term-regular.ttf iosevka-term-italic.ttf iosevka-term-bold.ttf -d "${_TMP}/in"
 mkdir -p "${_TMP}/out"
 
 echo "Patching with nerdfonts…"
