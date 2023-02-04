@@ -25,6 +25,7 @@ mkdir -p "${_TMP}/out"
 echo "Patching with nerdfonts…"
 set +e
 docker run \
+    --pull always \
     --user "$(id -u):$(id -g)" \
     --volume "${_TMP}/in":/in \
     --volume "${_TMP}/out":/out \
