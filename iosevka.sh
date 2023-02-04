@@ -30,7 +30,7 @@ docker run \
     --volume "${_TMP}/in":/in \
     --volume "${_TMP}/out":/out \
     --rm \
-    nerdfonts/patcher --complete --careful --no-progressbars --quiet
+    nerdfonts/patcher --complete --quiet
 set -e
 
 echo "Removing old fonts…"
