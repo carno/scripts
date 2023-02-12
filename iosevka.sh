@@ -33,6 +33,9 @@ docker run \
     nerdfonts/patcher --complete --quiet
 set -e
 
+echo "Checking docker run output…"
+test -n "$(find "${_TMP}/out" -type f -name '*.ttf')"
+
 echo "Removing old fonts…"
 # shellcheck disable=SC2086
 rm -rf ${HOME}/.fonts/[iI]osevka*
