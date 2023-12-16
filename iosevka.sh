@@ -3,7 +3,7 @@
 set -euo pipefail
 
 declare -r _VERSION="${1:?Missing Iosevka version}"
-declare -a _FILES=("ttf-iosevka-term-")
+declare -a _FILES=("PkgTTF-IosevkaTerm-")
 _TMP=$(mktemp -d)
 declare -r _TMP
 
@@ -19,7 +19,7 @@ for prefix in "${_FILES[@]}"; do
 done
 
 echo "Extracting archives…"
-unzip -o -u "${_TMP}/*.zip" iosevka-term-regular.ttf iosevka-term-italic.ttf iosevka-term-bold.ttf -d "${_TMP}/in"
+unzip -o -u "${_TMP}/*.zip" IosevkaTerm-Regular.ttf IosevkaTerm-Italic.ttf IosevkaTerm-Bold.ttf -d "${_TMP}/in"
 mkdir -p "${_TMP}/out"
 
 echo "Patching with nerdfonts…"
